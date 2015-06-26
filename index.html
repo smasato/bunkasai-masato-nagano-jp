@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="2015年に行われる高等学校の文化祭の一覧できるサイトです。">
+    <meta name="description" content="2015年に行われる長野県内の高校の文化祭を一覧できるサイトです。現役高校生が管理を行っています。">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>長野県高等学校文化祭一覧</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -377,68 +377,32 @@
         <hr>
         <p id="footer-text">Copyright &copy; Sugiyama Masato All Rights Reserved.</p>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="./js/bootstrap.js"></script>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script>
         $(function () {
-            var googleMapApi = "https://www.google.com/maps/embed/v1/place";
-            var googleApiKey = "AIzaSyBQ7yQtI3tqEUDYYcvodnb2xu5muJDTXok";
-            var googleMapZoom = "15"
-            var googleMapPalce = ""
             var name = ""
             var SchoolName = ""
             var date = ""
             var url = ""
-            $(function () {
-                var url = location.href;
-                var title = document.title;
-                var lineButtonUri = "http://line.me/msg/text/?" + encodeURIComponent(title) + "%20" + encodeURIComponent(url);
-                var tweetButtonUri = "http://twitter.com/share?text=" + encodeURIComponent(title) + "%20" + "%26%26url=" + url;
-                $("div#share > a.line-button").attr('href', lineButtonUri);
-                $("div#share > a.tweet-button").attr('href', tweetButtonUri);
-                console.log(lineButtonUri);
-                console.log(tweetButtonUri);
-            });
-            $(function () {
-                var headerHight = 80;
-                $('a[href^=#]').click(function () {
-                    var href = $(this).attr("href");
-                    var target = $(href == "#" || href == "" ? 'html' : href);
-                    var position = target.offset().top - headerHight;
-                    $("html, body").animate({
-                        scrollTop: position
-                    }, 550, "swing");
-                    return false;
-                });
-            });
             $("div.city > div.panel").each(function () {
-                var googleMapPalce = $(".school-name", this).text();
-                var googleMapUri = googleMapApi + '?key=' + googleApiKey + '&q=' + encodeURI(googleMapPalce) + '&zoom=' + googleMapZoom;
                 var name = $(".name", this).text();
                 var schoolName = $(".school-name", this).text();
                 var date = $(".date", this).text();
                 var url = location.href;
                 var title = document.title;
-                var obj = $(this).text();
                 var lineButtonUri = "http://line.me/msg/text/?" + encodeURIComponent(schoolName) + "%20" + encodeURIComponent(name) + "%0A" + encodeURIComponent("開催期間") + "%20" + encodeURIComponent(date) + "%0A" + encodeURIComponent(url);
                 var tweetButtonUri = "http://twitter.com/share?text=" + encodeURIComponent(schoolName) + "%20" + encodeURIComponent(name) + "%20" + encodeURIComponent("開催期間") + "%20" + encodeURIComponent(date) + "%20" + encodeURIComponent("|") + "%20" + encodeURIComponent(title) + "%26%26;url=" + url;
-                $("iframe", this).attr('data-echo', googleMapUri);
                 $("a.line-button", this).attr('href', lineButtonUri);
                 $("a.tweet-button", this).attr('href', tweetButtonUri);
             });
         });
     </script>
-    <script>
-        $(function () {
-            $("#pagetop").click(function () {
-                $("html,body").animate({
-                    scrollTop: 0
-                }, 'slow');
-                return false;
-            });
-        });
-    </script>
-    <script src="./js/echo.min.js"></script>
+    <script src="js/scrollfix.js"></script>
+    <script src="js/pagetop.js"></script>
+    <script src="js/googlemap.js"></script>
+    <script src="js/topshare.js"></script>
+    <script src="js/echo.min.js"></script>
     <script>
         echo.init();
     </script>
