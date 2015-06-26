@@ -379,25 +379,7 @@
     </footer>
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script>
-        $(function () {
-            var name = ""
-            var SchoolName = ""
-            var date = ""
-            var url = ""
-            $("div.city > div.panel").each(function () {
-                var name = $(".name", this).text();
-                var schoolName = $(".school-name", this).text();
-                var date = $(".date", this).text();
-                var url = location.href;
-                var title = document.title;
-                var lineButtonUri = "http://line.me/msg/text/?" + encodeURIComponent(schoolName) + "%20" + encodeURIComponent(name) + "%0A" + encodeURIComponent("開催期間") + "%20" + encodeURIComponent(date) + "%0A" + encodeURIComponent(url);
-                var tweetButtonUri = "http://twitter.com/share?text=" + encodeURIComponent(schoolName) + "%20" + encodeURIComponent(name) + "%20" + encodeURIComponent("開催期間") + "%20" + encodeURIComponent(date) + "%20" + encodeURIComponent("|") + "%20" + encodeURIComponent(title) + "%26%26;url=" + url;
-                $("a.line-button", this).attr('href', lineButtonUri);
-                $("a.tweet-button", this).attr('href', tweetButtonUri);
-            });
-        });
-    </script>
+    <script src="js/share.js"></script>
     <script src="js/scrollfix.js"></script>
     <script src="js/pagetop.js"></script>
     <script src="js/googlemap.js"></script>
