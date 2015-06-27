@@ -1,9 +1,10 @@
 $(function () {
+    "use strict";
     var headerHight = 80;
     $('a[href^=#]').click(function () {
-        var href = $(this).attr("href");
-        var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top - headerHight;
+        var href = $(this).attr("href"),
+            target = $(href === "#" || href === "" ? 'html' : href),
+            position = target.offset().top - headerHight;
         $("html, body").animate({
             scrollTop: position
         }, 550, "swing");
