@@ -10,27 +10,88 @@
     <meta name="twitter:site" content="" />
     <meta name="twitter:title" content="" />
     <meta name="twitter:description" content="" />
-    <title>festlist</title>
-    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <title>長野県文化祭一覧</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <header>
-        <div class="hdbar">
-            <a href="#"><img class="hdlogo" src="./img/logo.png"></a>
-        </div>
+        <nav class="navbar navbar-inverse nav navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">長野県高等学校文化祭一覧</a>
+                </div>
+                <div class="collapse navbar-collapse" id="nav-menu-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#nagano">詳細検索</a>
+                        </li>
+                        <li><a href="#matsumoto">hoge</a>
+                        </li>
+                        <li><a href="#nakano">hoge</a>
+                        </li>
+                        <li><a href="#disclaimer">hoge</a>
+                        </li>
+                    </ul>
+                    <div class="input-group search-box hidden-xs hidden-sm">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">検索</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
-    <div class="container">
-        <div class="contents">
+<div class="container-fluid">
+    <div class="col-xs-12 visible-xs-block visible-sm-block search-box-xs">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search">
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="button">検索</button>
+            </span>
         </div>
     </div>
-    <footer>
-        <hr>
-        <p id="footer-text">Copyright &copy; festlist All Rights Reserved.</p>
-    </footer>
-    <script src="js/jquery-2.1.4.js"></script>
-    <script>
+    <div class="col-xs-2 side-bar">
+        <a href="#" class="btn btn-default">Default button</a>
+        <a href="#" class="btn btn-default">Default button</a>
+        <a href="#" class="btn btn-default">Default button</a>
+        <a href="#" class="btn btn-default">Default button</a>
+        <a href="#" class="btn btn-default">Default button</a>
+    </div>
+    <div class="jumbotron col-xs-10">
+        <h1>これはなに?</h1>
+        <p>なんか文化祭のまとめっぽいやつです</p>
+        <p><a class="btn btn-primary btn-lg">About</a></p>
+    </div>
+    <div class="col-xs-12 col-sm-10 col-sm-offset-2 col-md-10 col-md-offset-2 news">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">新着情報</h3>
+          </div>
+          <div class="panel-body">
+            <span class="date">2015-08-08</span>そんなものはない
+            <hr style="margin-top: 5px; margin-bottom: 5px;">
+            <span class="date">2015-08-08</span>そんなものはない
+          </div>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <hr>
+    <p id="footer-text">Copyright &copy; Masato Sugiyama All Rights Reserved.</p>
+</footer>
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/footerFixed.js"></script>
+<script>
         // Google Analytics Script Area
     </script>
 </body>

@@ -1,11 +1,57 @@
-.hdbar {
-    background-color: rgb(89, 254, 244);
+body {
+	margin-top: 70px;
 }
-.hdlogo {
-    width: auto;
-    height: 45px;
-    margin: 5px;
+.navbar-inverse {
+	opacity: 0.8;
 }
-.hdlogo:hover {
-    /*logoのマウスオーバー時の処理*/
+.side-bar>ul>li{
+	list-style: none;
+	z-index: 2;
+}
+footer>p {
+	text-align: center;
+}
+footer>hr {
+	margin: 0;
+}
+ul.nav > li > a {
+	margin: 0px;
+	padding-top: 11.5px;
+	padding-bottom: 11.5px;
+}
+.navbar {
+	min-height: 45px;
+}
+.navbar-brand {
+	padding-top: 11.5px;
+	padding-bottom: 11.5px;
+	height: 36.5px;
+}
+ul.nav > li:last-child > a {
+	padding-right: 0;
+}
+.navbar-toggle {
+	margin-top: 5.5px;
+	margin-bottom: 5.5px;
+}
+.side-bar a {
+	width: 100%;
+	margin-bottom: 5px;
+}
+.panel {
+	float: left;
+	width: 100%;
+}
+.search-box {
+	padding-bottom: 4px;
+	padding-top: 4px;
+	margin-right: 0;
+	width: 170px;
+	float: right;
+}
+.search-box .btn  {
+	height: 37px;
+}
+.search-box-xs {
+	margin-bottom: 22px;
 }
