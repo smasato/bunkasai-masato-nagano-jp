@@ -7,7 +7,7 @@ body {
 .official {
     display: inline;
 }
-span.label {
+.label span {
     margin-right: 5px;
 }
 .ggmap {
@@ -40,7 +40,7 @@ span.label {
 footer > hr {
     margin-bottom: 0;
 }
-p#footer-text {
+#footer-text p {
     text-align: center;
     color: gray;
     margin-top: 11px;
