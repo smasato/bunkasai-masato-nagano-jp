@@ -55,3 +55,8 @@ ul.nav > li:last-child > a {
 .search-box-xs {
 	margin-bottom: 22px;
 }
+@media (max-width:768px) {
+	div.side-bar {
+		display: flex;
+	}
+}
