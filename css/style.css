@@ -45,3 +45,6 @@ footer > hr {
     color: gray;
     margin-top: 11px;
 }
+.panel-body  .label {
+    margin-right: 5px;
+}
